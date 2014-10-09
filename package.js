@@ -1,7 +1,7 @@
 Package.describe({
-  summary: " \* Fill me in! *\ ",
-  version: "1.0.0",
-  git: " \* Fill me in! *\ "
+  summary: " Stylus along with Jeet, Rupture, Axis and Autoprefixer! ",
+  version: "0.1.0",
+  git: " https://github.com/jsnoble1/meteor-multi-styl "
 });
 
 Package.onUse(function(api) {
