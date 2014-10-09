@@ -4,13 +4,19 @@ Package.describe({
   git: " https://github.com/jsnoble1/meteor-multi-styl "
 });
 
-Package.onUse(function(api) {
-  api.versionsFrom('METEOR@0.9.3.1');
-  api.addFiles('jnoble:multi-styl.js');
-});
 
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('jnoble:multi-styl');
-  api.addFiles('jnoble:multi-styl-tests.js');
+Package._transitional_registerBuildPlugin({
+  name: "compileStylus",
+  use: [],
+  sources: [
+    'plugin/compile-stylus.js'
+  ],
+  npmDependencies: {
+    "stylus": "0.49.1",
+    "nib": "1.0.4",
+    "autoprefixer-stylus": "0.3.0",
+    "jeet": "6.1.2",
+    "rupture": "0.4.0",
+    "axis": "0.3.0"
+  }
 });
